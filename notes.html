@@ -12,6 +12,7 @@
     background: #f4f6f8;
   }
 
+  /* Header */
   .header {
     background: #1f3c88;
     color: white;
@@ -24,41 +25,42 @@
     font-size: 22px;
   }
 
-  .container {
-    padding: 20px;
+  .header p {
+    margin: 6px 0 0;
   }
-  /* Background image section */
-.bg-section {
-  width: 100%;
-  height: 200px; /* safe height */
-  background-image: url("class12-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
 
-/* Dark overlay so image doesn't overpower */
-.bg-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
+  /* Full-width background content area */
+  .content {
+    background-image: url("class12-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
-/* Optional text on background */
-.bg-text {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  text-align: center;
-  padding-top: 70px;
-}
+  /* Overlay */
+  .content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+  }
 
-.bg-text h3 {
-  margin: 0;
-  font-size: 20px;
-}
+  /* Inner centered container */
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 30px 20px;
+  }
 
+  @media (min-width: 768px) {
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+
+  /* Notes buttons */
   .note-btn {
     display: block;
     text-decoration: none;
@@ -71,78 +73,72 @@
     border-radius: 8px;
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
   }
 
   .note-btn:hover {
     background: #ffdb4d;
   }
 
+  /* Footer */
   .footer {
-  background: #1f3c88;
-  color: #ffffff;
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 14px;
-}
+    background: #1f3c88;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+  }
 
-.footer h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
+  .footer h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
 
-.footer p {
-  margin: 5px 0;
-  line-height: 1.5;
-}
+  .footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
 
-.footer .copyright {
-  margin-top: 12px;
-  font-size: 12px;
-  opacity: 0.85;
-}
   .footer a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-}
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-.footer a:hover {
-  text-decoration: underline;
-}
+  .footer a:hover {
+    text-decoration: underline;
+  }
 
-  @media (min-width: 768px) {
-    .container {
-      max-width: 500px;
-      margin: auto;
-    }
+  .footer .copyright {
+    margin-top: 12px;
+    font-size: 12px;
+    opacity: 0.85;
   }
 </style>
 </head>
 
 <body>
 
+<!-- Header -->
 <div class="header">
   <h2>📚 Class 12 Subject Notes</h2>
   <p>Select your subject to continue</p>
 </div>
-  <div class="bg-section">
-  <div class="bg-text">
-    <h3>Smart Notes for Smart Students</h3>
+
+<!-- Background image section -->
+<div class="content">
+  <div class="container">
+    <a class="note-btn" href="math.html" target="_blank">📘 Mathematics Notes</a>
+    <a class="note-btn" href="physics.html" target="_blank">📗 Physics Notes</a>
+    <a class="note-btn" href="chemistry.html" target="_blank">📕 Chemistry Notes</a>
+    <a class="note-btn" href="biology.html" target="_blank">🧬 Biology Notes</a>
+    <a class="note-btn" href="commerce.html" target="_blank">📊 Commerce Notes</a>
+    <a class="note-btn" href="agriculture.html" target="_blank">🌾 Agriculture Notes</a>
   </div>
 </div>
 
-<div class="container">
-
-  <a class="note-btn" href="math.html"target="_blank">📘 Mathematics Notes</a>
-  <a class="note-btn" href="physics.html"target="_blank">📗 Physics Notes</a>
-  <a class="note-btn" href="chemistry.html"target="_blank">📕 Chemistry Notes</a>
-  <a class="note-btn" href="biology.html"target="_blank">🧬 Biology Notes</a>
-  <a class="note-btn" href="commerce.html"target="_blank">📊 Commerce Notes</a>
-  <a class="note-btn" href="agriculture.html"target="_blank">🌾 Agriculture Notes</a>
-
-</div>
-
+<!-- Footer -->
 <div class="footer">
   <h3>🏫 IPS Academy, Jhabua</h3>
 
@@ -151,9 +147,10 @@
     to academic resources for students.
   </p>
 
-  <p><strong>📍 Address:</strong>IPS ACADEMY, Bilidoz, Old Ranapur Road, Jhabua, Madhya Pradesh</p>
+  <p><strong>📍 Address:</strong> IPS ACADEMY, Bilidoz, Old Ranapur Road, Jhabua, Madhya Pradesh</p>
   <p><strong>📞 Contact:</strong> +91 9926361161, 9111946161</p>
   <p><strong>✉ Email:</strong> admissions.jhabua@ipsacademy.org</p>
+
   <p>
     <strong>🌐 Official Link:</strong>
     <a href="https://share.google/8D0hUY9m8atAHlSS6" target="_blank">
@@ -167,7 +164,4 @@
 </div>
 
 </body>
-
 </html>
-
-
