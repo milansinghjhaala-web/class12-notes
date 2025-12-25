@@ -13,19 +13,17 @@
 
         body {
             font-family: Arial, sans-serif;
+            background: #000;
         }
 
-        /* Poster image section */
-        .bg {
-            background-image: url("college.jpg");
-            background-size: 100% auto;   /* fit width, no gap */
-            background-repeat: no-repeat;
-            background-position: top center;
+        /* Poster image */
+        .poster img {
             width: 100%;
-            padding-top: 160%; /* controls poster height (adjust if needed) */
+            height: auto;
+            display: block;   /* removes white gap */
         }
 
-        /* Details section BELOW poster */
+        /* Button section */
         .details {
             background-color: #1f1f1f;
             color: white;
@@ -47,8 +45,8 @@
             text-decoration: none;
             background-color: #ffcc00;
             color: black;
-            padding: 12px 25px;
-            border-radius: 6px;
+            padding: 12px 28px;
+            border-radius: 8px;
             font-weight: bold;
         }
     </style>
@@ -57,9 +55,11 @@
 <body>
 
     <!-- Poster -->
-    <div class="bg"></div>
+    <div class="poster">
+        <img src="college.jpg" alt="IPS Academy Admission Poster">
+    </div>
 
-    <!-- Action section -->
+    <!-- Action Section -->
     <div class="details">
         <h2>IPS ACADEMY JHABUA</h2>
         <p>Click below to fill details</p>
